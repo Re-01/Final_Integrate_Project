@@ -1,0 +1,576 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*Remove this rule, this is only for demo purposes to make the boxes black with white text
+The line height on the <p> tag gives each box a height value*/
+
+p
+{
+	color: #fff;
+	line-height: 100px;
+	background: #000;
+	text-align: center;
+	margin: 0;
+}
+
+/*basic reset*/
+/*browsers have built in values for elements so we'll reset a few things to zero, you can add to this or remove items as needed*/
+
+div,p,body,header,footer,section,article,nav 
+{ 
+	margin: 0; 
+	padding: 0; 
+}	
+
+img 
+{ 
+	border: none; /*Remove border if image is a link*/
+	margin: 0; 
+	padding: 0; 
+}
+
+/*html selectors*/
+
+body 
+{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	color: #333;
+}
+
+
+/*a:link is for not visited(standard unclicked link), 
+a:visited is for visited, and just a applies to both.*/
+/*a will also style anchor links*/
+
+a:link, a:visited 
+{ 
+ 	text-decoration:none; 	
+}
+
+a:hover, a:active 
+{ 
+	text-decoration:none; 
+}
+
+/*hide elements from browser but show for doc outline*/
+
+.hidden
+{
+	display: none;
+}
+
+/*section is block level and no width specidied therefore stretches full screen*/
+#topBar
+{
+	background-color: #000;
+	height: 20px;
+}
+
+/*Site Container*/
+/*This is essentially a box that we place the whole site in.  
+We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 20px (960px) so it fits on 1024x768 screens.*/
+
+#siteContainer 
+{
+	margin: 0 auto;
+	width: 920px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/*This is a flex container*/
+#mainHeader
+{
+	margin-top: 40px;
+	padding-bottom: 40px;
+	display: flex;
+	flex-direction: row;
+  	justify-content: flex-start;
+	border-bottom: solid 1px #DDD;
+}
+
+/*This is a flex item*/
+#logo
+{
+	width: 200px;
+}
+
+/*This is also a flex item*/
+/*We use margin left auto to send it all the way to the right*/
+#mainNav
+{
+  width: 500px;
+  height: 25px;
+  margin-top: 45px;
+  margin-left: auto;
+}
+
+#mainNav ul
+{
+	list-style-type: none;
+     padding: 0;
+}
+
+#mainNav ul li 
+{
+   font-size: 14px;
+  display: inline;
+  cursor: pointer;
+  margin-left: 25px;
+}
+
+#mainNav ul li a
+{
+	color:#242f7f ;
+  padding: 5px;
+  font-weight: bold;
+}
+
+#mainNav ul li a:hover {
+  padding: 5px;
+  color:#ed1c24;
+  font-weight: bold;
+}
+
+#selected
+{
+	background-color:#ef9598;
+	padding: 5px 0px 5px 0px;
+}
+#boxSearch {
+  background-color: rgb(248, 245, 241);
+  opacity: 0.769;
+  box-shadow: inset 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+  left: 721px;
+  top: 133px;
+  width: 220px;
+  height: 27px;
+  z-index: 54;
+  margin-top: 20px;
+  margin-left: 220px;
+}
+
+#promo 
+{
+	margin-top: 40px;
+	border-bottom: solid 1px #DDD;
+	padding-bottom: 40px;
+	display: flex;
+	flex-direction: row;
+  	justify-content: flex-start;
+}
+
+/*Get rid of this, here just to give different height to promo*/
+#promo p 
+{
+	line-height: 250px;
+}
+
+#promoText 
+{
+	width: 600px;
+}
+
+
+#promoImageBig 
+{
+	margin-left: auto;
+	width: 280px;
+}
+
+#productInfo 
+{
+	margin-top: 40px;
+	display: flex;
+	flex-direction: row;
+  	justify-content: space-between;
+	border-bottom: solid 1px #DDD;
+	padding-bottom: 40px;
+}
+
+/*Get rid of this, here just to give different height to productInfo*/
+#productInfo p 
+{
+	line-height: 300px;
+}
+
+.productDesc 
+{
+	width: 200px;
+}
+
+
+.productDescLargeLeft 
+{
+	width: 410px;
+}
+
+.productDescLargeRight 
+{
+	width: 410px;
+}
+
+
+#productDescLargeLeft  h2
+{
+  color: #242f7f;
+  font-size: 24px;
+  letter-spacing: 20px;
+  text-align: left;
+}
+
+#productDescLargeLeft h3
+{
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  font-weight:normal;
+  margin-bottom: 20px;
+}
+
+#mainFooter 
+{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	background-color:#242f7f; 
+	display: flex;
+	flex-direction: row;
+  	justify-content: flex-start;
+}
+
+
+#footerCon 
+{
+	width: 500px;
+	text-align: center;
+	line-height: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#footerCon .talkText
+{
+	color:#ed1c24;
+}
+
+#footerCon h2
+{
+	color:#fcfbfa;
+}
+
+.socialIcon
+{
+	display: inline-block;
+	margin-top: 55px;
+	height: 45px;
+	margin-left: auto;
+	margin-right: 100px;
+	background-color: 
+}
+#copyRight 
+{
+	margin-left: auto;
+	width: 310px;
+	display: flex;
+	flex-direction: row;
+  	justify-content: space-evenly;
+}
+
+#copyRight h2
+{
+	color:#ed1c24;
+}
+
+#copyRight h5
+{
+	color:#fcfbfa;
+	text-align: right;
+	line-height: 20px;
+	margin-right: 10px;
+}
+
+/*COURSES*/
+/*Page 2 - Notice we are using one style sheet for all of the pages*/
+
+#promoText 
+{
+	margin-left: 40px;
+	line-height: 15px;
+}
+
+#promoText h2
+{
+	font-weight: bold;
+	font-size:24px;
+	font-family: Myriad Pro;
+	color: #242f7f;
+}
+
+#promoText .para
+{
+	color:#000000;
+	font-weight: normal;
+	font-family: Myriad Pro;
+	font-size: 18px;
+	font-style: normal;
+}
+#promoText h3
+{
+	font-size: 21px;
+	font-family: Myriad Pro;
+	font-style:  italic;
+	color:#e7181e;
+	letter-spacing: 5;
+	line-height: 20px;
+	font-weight: normal;
+}
+.productDesc 
+{
+	line-height: 25px;
+}
+.productDesc h2
+{
+	font-family: Myriad Pro;
+	font-size: 18px;
+	font-weight: bold;
+	color: #5aa2fa;
+	letter-spacing: 5;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.productDesc h3
+{
+	font-family: Myriad Pro;
+	font-size: 14px;
+	letter-spacing: 5;
+	color: #000000;
+	font-weight: normal;
+	margin-top: 0px;
+}
+
+#contentCon {
+	margin-top: 40px;
+	border-bottom: solid 1px #DDD;
+	padding-bottom: 40px;
+	display: flex;
+	flex-direction: row;
+  	justify-content: flex-start;
+}
+
+/*contact*/
+/*Get rid of this, here just to give different height to promo*/
+
+#content1 
+{
+	width: 440px;
+	
+}
+
+#content1 h2
+{
+	font-size: 24;
+	font-family: arial;
+	font-weight: normal;
+	line-height: 0;
+	letter-spacing: 20;
+	color: #242f7f;
+	background-color: #faf8f6;
+}
+
+#content1 p
+{
+	font-weight: normal;
+	font-size: 16;
+	font-family: arial;
+	line-height: 2;
+	letter-spacing: 20;
+	color: #1c1b1b;
+	text-align: left;
+	width:69;
+	background-color: #faf8f6;
+}
+
+#name
+{
+	color:#242f7f;
+	font-size: 18px;
+	font-family: Myriad Pro;
+	font-weight: : normal;
+	letter-spacing: 20;
+	line-height: 5;
+	text-align: right;
+}
+
+#nm
+{
+  background-color: #dcbe8a;
+  box-shadow: inset 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+  left: 36px;
+  top: 402px;
+  width: 100px;
+  height: 12.5px;
+  z-index: 31;
+
+}
+
+#email
+{
+	color:#242f7f;
+	font-size: 18px;
+	font-family: Myriad Pro;
+	font-weight: : normal;
+	letter-spacing: 20;
+	line-height: 5;
+	text-align: right;
+}
+
+#em 
+{
+	background-color: #dcbe8a;
+  box-shadow: inset 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+  left: 36px;
+  top: 402px;
+  width: 200px;
+  height: 15px;
+  z-index: 31;
+}
+
+
+#comments
+{
+	color:#242f7f;
+	font-size: 18px;
+	font-family: Myriad Pro;
+	font-weight: : normal;
+	letter-spacing: 20;
+	line-height: 5;
+	text-align: right;
+}
+
+#cmnt
+{
+  background-color: rgb(220, 190, 138);
+  box-shadow: inset 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+  left: 34px;
+  top: 459px;
+  width: 204px;
+  height: 84px;
+  z-index: 35;
+
+}
+
+#submit
+{
+  background-color: rgb(220, 190, 138);
+  box-shadow: inset 0px 3px 7px 0px rgba(0, 0, 0, 0.3);
+  left: 283px;
+  top: 484px;
+  width: 122px;
+  height: 32px;
+  z-index: 37;
+  color: #242f7f;
+  font-size: 18px;
+  font-family: Myriad Pro;
+  font-weight: normal;
+  text-align: center;
+  line-height: 1.143;
+  padding-top: 6px;
+}
+
+#content2 
+{
+	margin-left:auto;
+	width: 440px;
+}
+
+#visit
+{
+	width: 1453;
+	height: 402;
+	background-color: #faf9f8;
+}
+
+#visit h2
+{
+	font-size: 20px;
+	line-height: 2;
+	letter-spacing: 20;
+	font-family: arial;
+	font-weight:bold;
+	color:#242f7f;
+	display: flex;
+	flex-direction: row;
+  	justify-content: evenly;
+  	padding-bottom: 0px;
+}
+
+#visit p
+{
+	font-size: 16;
+	letter-spacing: 20;
+	font-family: Arial;
+	font-weight: normal;
+	display: flex;
+	flex-direction: row;
+	justify-content: evenly;
+	color: #1c1b1b;
+	text-align: left;
+	background-color: #faf9f8;
+	line-height: 2;
+	padding-top: 0px;
+}
+
+.imgMap
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+/*Page 3*/
+
+#productImages 
+{
+	margin-top: 40px;
+	border-bottom: solid 1px #DDD;
+	padding-bottom: 40px;
+	display: flex;
+	flex-direction: row;
+  	padding: 10px;
+  }
+
+/*Get rid of this, here just to give different height*/
+#productImages p
+{
+	line-height: 250px;
+}
+
+.productImg 
+{
+	width: 280px;
+}
+
+
+#contentAreaBig
+{
+	margin-top: 40px;
+	border-bottom: solid 1px #DDD;
+	padding-bottom: 40px;
+}
+
+/*Get rid of this, here just to give different height*/
+#contentAreaBig p 
+{
+	line-height: 300px;
+}
+
+#promoImageBig
+{
+	width: 920px;
+}
+
+
+
+
