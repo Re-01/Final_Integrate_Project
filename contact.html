@@ -7,18 +7,67 @@
 </head>
 <body>
 	<section id="topBar"></section><!--end topBar-->
-	<div id="siteContainer">
-    	<header id="mainHeader">
-        	<div id="logo"><p>Logo</p></div><!--end logo-->
-            <nav id="mainNav"><p>Nav</p></nav><!--end mainNav-->
+
+
+    <div id="siteContainer">
+        <header id="mainHeader">
+            <div id="logo">
+               <img src="images/cunha_renata_kaur_prabhjot_logo.svg">
+            </div><!--end logo-->
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.html">STUDY WITH US</a></li>
+                    <li><a href="courses.html">COURSES</a></li>
+                    <li id="selected"><a href="contact.html">CONTACT</a></li>
+                </ul>
+                <div id="boxSearch"></div>
+            </nav><!--end mainNav-->
         </header><!--end mainHeader-->
         <section id="contentCon">
-        	<div id="content1"><p>Content Area 1</p></div><!--end content1-->
-        	<div id="content2"><p>Content Area 2</p></div><!--end content2-->
+        	<div id="content1">
+                <h2>CONTACT US</h2>
+                <p>For more information about our courses or to book an international test please use the form below.</p>
+
+                <form method="post" action="form.php" autocomplee="off" id="form">
+                    <label id="name" for="name">Name:</label>
+                    <input id="nm" type="text" required>
+                    <label id="email" for="email">E-mail:</label>
+                    <input id="em" type="text" required>
+                    <label id="comments" for="comments">Comments:</label>
+                    <input id="cmnt" type="text" required>
+                    <input type="submit" value="Submit" id="submit">
+                </form>
+                <img src="images/contact_us_pic_final.jpg">
+            </div><!--end content1-->
+
+
+        	<div id="content2nd">
+             <img src="images/welcome_pic_final.jpg"> 
+             <section id="visit">
+             <h2>VISIT US</h2>
+             <p>711 Central Ave, London, Canada<br>93 Edward St, Brisbane City,Australia</p>
+             </section>  
+             <div class="imgMap">
+                <img src="images/london map.jpg" width="247px" height="159px">
+             <img src="images/australia map.jpg" width="274px" height="159px">
+            </div>
+        </div><!--end content2-->
         </section><!--end contentCon-->
         <footer id="mainFooter">
-        	<div id="footerNav"><p>Footer Nav</p></div><!--end FooterNav-->
-            <div id="copyRight"><p>Copyright Info</p></div><!--end Copyright-->
+            <div id="footerCon">
+                <h2 class="talkText">Do You Want to talk with us?</h2>
+                <h2>+1 (647) 123-1234</h2>
+                <h2>+1 (647) 123-1234</h2>
+            </div><!--end FooterNav-->
+            <div id="copyRight">
+                <h2>Follow us:</h2>
+                <section class="socialIcon"><img src="images/twitter.jpg">
+                <img src="images/youtube.jpg">
+                <img src="images/facebook.jpg">
+                <img src="images/instagram.jpg"></section>
+                <h5>BRILLIANT ENGLISH<BR>COPYRIGHT<BR>2018<BR>ALL RIGHTS RESERVED</h5>
+            </div><!--end Copyright-->
         </footer><!--end mainFooter-->
     </div><!--end siteContainer-->
 <script src="js/main.js"></script>    
