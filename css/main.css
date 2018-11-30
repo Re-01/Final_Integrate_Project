@@ -63,8 +63,12 @@ a:hover, a:active
 /*section is block level and no width specidied therefore stretches full screen*/
 #topBar
 {
-	background-color: #000;
+	background-color:#242f7f; 
 	height: 20px;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+  	justify-content: flex-start;
 }
 
 /*Site Container*/
@@ -122,33 +126,35 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
 
 #mainNav ul li a
 {
-	color:242f7f ;
+	color:#242f7f ;
   padding: 5px;
+  font-weight: bold;
 }
 
 #mainNav ul li a:hover {
   padding: 5px;
-  color:ed1c24;
+  color:#ed1c24;
+  font-weight: bold;
 }
+
+#selected
+{
+	background-color:#ef9598;
+	padding: 5px 0px 5px 0px;
+}
+
 
 #boxSearch {
   background-color: rgb(248, 245, 241);
   opacity: 0.769;
   box-shadow: inset 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
-  position: absolute;
   left: 721px;
   top: 133px;
   width: 220px;
   height: 27px;
   z-index: 54;
   margin-top: 20px;
-  margin-left: 75px;
-}
-
-#selected
-{
-  padding: 5px 0px 5px 0px;
-  background-color: #ddeff7;
+  margin-left: 220px;
 }
 
 #promo 
@@ -172,10 +178,9 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
 	width: 600px;
 }
 
-
 #promoImageBig 
 {
-	margin-left: auto;
+	margin-left: 0px;
 	width: 280px;
 }
 
@@ -200,44 +205,189 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
 	width: 200px;
 }
 
-#productDescLargeLeft  h2
+
+.productDescLarge
 {
-  color: #242f7f;
-  font-size: 24px;
-  letter-spacing: 20px;
-  text-align: left;
+	width: 410px;
+	position: relative;
+	height: max-content;
 }
 
-#productDescLargeLeft h3
+.productDescLarge
+{
+	width: 410px;
+}
+
+.productDescLarge  div 
+{
+	position: absolute;
+	width: 100%;
+	top: 100%;
+	left: 0;
+	background-color: rgba(255,255,255,0.5);
+	transform: translate(0,-100%); 
+}
+
+.productDescLarge  div h2
+{
+	color: #242f7f;
+	font-size: 24px;
+	text-align: left;
+	z-index: 5;
+	padding: 0 10px;
+}
+
+.productDescLarge div  h3
 {
   font-size: 14px;
   color: #fff;
-  text-align: center;
+  text-align: left;
   font-weight:normal;
-  margin-bottom: 20px;
+	padding: 0 10px;
 }
 
 #mainFooter 
 {
 	margin-top: 40px;
 	margin-bottom: 40px;
+	background-color:#242f7f; 
 	display: flex;
 	flex-direction: row;
   	justify-content: flex-start;
 }
 
-#footerNav 
+
+#footerCon 
 {
 	width: 500px;
+	text-align: center;
+	line-height: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
+#can
+{
+	display: flex;
+	flex-direction: row;
+	justify content: evenly;
+	margin-left: 150px;
+}
+
+#aus
+{
+	display: flex;
+	flex-direction: row;
+	justify content: evenly;
+	margin-left: 150px;
+}
+
+
+#footerCon .talkText
+{
+	color:#ed1c24;
+	margin-top: 30px;
+}
+
+#footerCon h2
+{
+	color:#fcfbfa;
+	margin-top: 5px;
+}
+#socialIcon
+{
+	margin: auto;
+}
+.socialIcon
+{
+	display: inline-block;
+	margin-top: 0px;
+	height: 45px;
+	margin-left: 20px;
+	margin-right: 100px;
+	background-color: 242f7f;
+}
 #copyRight 
 {
 	margin-left: auto;
 	width: 310px;
+	display: flex;
+	flex-direction: row;
+  	justify-content: space-evenly;
 }
 
+#copyRight h2
+{
+	color:#ed1c24;
+}
+
+#copyRight h5
+{
+	color:#fcfbfa;
+	text-align: right;
+	line-height: 20px;
+	margin-right: 10px;
+}
+
+/*COURSES*/
 /*Page 2 - Notice we are using one style sheet for all of the pages*/
+
+#promoText 
+{
+	margin-left: 40px;
+	line-height: 15px;
+}
+
+#promoText h2
+{
+	font-weight: bold;
+	font-size:24px;
+	font-family: Myriad Pro;
+	color: #242f7f;
+}
+
+#promoText .para
+{
+	color:#000000;
+	font-weight: normal;
+	font-family: Myriad Pro;
+	font-size: 18px;
+	font-style: normal;
+}
+#promoText h3
+{
+	font-size: 21px;
+	font-family: Myriad Pro;
+	font-style:  italic;
+	color:#e7181e;
+	letter-spacing: 5;
+	line-height: 20px;
+	font-weight: normal;
+}
+.productDesc 
+{
+	line-height: 25px;
+}
+.productDesc h2
+{
+	font-family: Myriad Pro;
+	font-size: 18px;
+	font-weight: bold;
+	color: #5aa2fa;
+	letter-spacing: 5;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.productDesc h3
+{
+	font-family: Myriad Pro;
+	font-size: 14px;
+	letter-spacing: 5;
+	color: #000000;
+	font-weight: normal;
+	margin-top: 0px;
+}
 
 #contentCon {
 	margin-top: 40px;
@@ -248,75 +398,210 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
   	justify-content: flex-start;
 }
 
+/*contact*/
 /*Get rid of this, here just to give different height to promo*/
-#contentCon p 
-{
-	line-height: 630px;
-}
 
 #content1 
 {
 	width: 440px;
 }
 
+.bck
+{
+		background-color:#faf8f6; 
+}
+#content1 h2
+{
+	font-size: 24;
+	font-family: arial;
+	font-weight: normal;
+	/*line-height: 0;*/
+	letter-spacing: 20;
+	color: #242f7f;
+	background-color: #faf8f6;
+}
+
+#content1 p
+{
+	font-weight: normal;
+	font-size: 16;
+	font-family: arial;
+	line-height: 2;
+	letter-spacing: 20;
+	color: #1c1b1b;
+	text-align: left;
+	width:69;
+	background-color: #faf8f6;
+}
+
+#name
+{
+	color:#242f7f;
+	font-size: 18px;
+	font-family: Myriad Pro;
+	font-weight: : normal;
+	letter-spacing: 20;
+	line-height: 5;
+	/*text-align: right;*/
+	/*float:left;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end*/;
+}
+
+#nm
+{
+  background-color: #dcbe8a;
+  box-shadow: inset 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+  left: 36px;
+  top: 402px;
+  width: 200px;
+  height: 25px;
+  z-index: 31;
+}
+
+#email
+{
+	color:#242f7f;
+	font-size: 18px;
+	font-family: Myriad Pro;
+	font-weight: : normal;
+	letter-spacing: 20;
+	line-height: 5;
+}
+
+#em 
+{
+	background-color: #dcbe8a;
+  box-shadow: inset 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+  left: 36px;
+  top: 402px;
+  width: 200px;
+  height: 25px;
+  z-index: 31;
+}
+
+
+#comments
+{
+	color:#242f7f;
+	font-size: 18px;
+	font-family: Myriad Pro;
+	font-weight: : normal;
+	letter-spacing: 20;
+	line-height: 5;
+	/*text-align: right;*/
+}
+
+#cmnt
+{
+  background-color: rgb(220, 190, 138);
+  box-shadow: inset 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+  left: 34px;
+  top: 459px;
+  width: 204px;
+  height: 84px;
+  z-index: 35;
+
+}
+
+#submit
+{
+  background-color: rgb(220, 190, 138);
+  box-shadow: inset 0px 3px 7px 0px rgba(0, 0, 0, 0.3);
+  left: 283px;
+  top: 484px;
+  width: 122px;
+  height: 32px;
+  /*z-index: 37;*/
+  color: #242f7f;
+  font-size: 18px;
+  font-family: Myriad Pro;
+  font-weight: normal;
+  /*text-align: center;*/
+  line-height: 1.143;
+  padding-top: 6px;
+  margin-left: 30px;
+  margin-top: 110px;
+}
+
 #content2 
 {
-	margin-left: auto;
+	margin-left:auto;
 	width: 440px;
 }
 
-/*Page 3*/
-
-#productImages 
+#visit
 {
-	margin-top: 40px;
-	border-bottom: solid 1px #DDD;
-	padding-bottom: 40px;
+	width: 1453;
+	height: 402;
+	background-color: #faf9f8;
+	padding-bottom: 0px;
+	margin: 0px auto;
+}
+
+#visit h2
+{
+	font-size: 20px;
+	line-height: 2;
+	letter-spacing: 20;
+	font-family: arial;
+	font-weight:bold;
+	color:#242f7f;
 	display: flex;
 	flex-direction: row;
-  	justify-content: space-between;
+  	justify-content: evenly;
+  	padding-bottom: 0px;
 }
 
-/*Get rid of this, here just to give different height*/
-#productImages p
+#visit p
 {
-	line-height: 250px;
+	font-size: 16;
+	letter-spacing: 20;
+	font-family: Arial;
+	font-weight: normal;
+	display: flex;
+	flex-direction: row;
+	justify-content: evenly;
+	color: #1c1b1b;
+	text-align: left;
+	background-color: #faf9f8;
+	line-height: 2;
+	padding-top: 0px;
 }
 
-.productImg 
+.imgMap
 {
-	width: 280px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 50px auto;
+	padding: 0px;
 }
-
-
-#contentAreaBig
+/*
+#map1
 {
-	margin-top: 40px;
-	border-bottom: solid 1px #DDD;
-	padding-bottom: 40px;
+	margin-right: 10px;
 }
+*/
 
-/*Get rid of this, here just to give different height*/
-#contentAreaBig p 
+#form
 {
-	line-height: 300px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
 }
 
-#promoImageBig
+#form input
 {
-	width: 920px;
+	width: 200px;
+	display: block;
+/*	margin-top: -10px;*/
 }
 
-
-/*Page 4*/
-
-.productDescLargeLeft 
+#form label
 {
-	width: 410px;
+	display: block;
+/*	margin-top: -30px;*/
 }
-
-.productDescLargeRight 
-{
-	width: 410px;
-}
-
